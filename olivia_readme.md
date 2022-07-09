@@ -19,10 +19,10 @@ Olivia AI Voice assistant:"Loading your personal Assistant Olivia....Hello, Good
 #### <u><i>Download The Latest Version Of The Git</u></i>.[<b>Click Here</b>](https://git-scm.com/download/win)
 
 ```
-git clone https://github.com/shameemkabeer/pythonvoiceassistant.git 
+git clone https://github.com/shameemkabeer/python_voice_assistant.git
 ```
 ```
-cd pythonvoiceassistant
+cd python_voice_assistant
 ```
 ```
 pip install -r requirements.txt
@@ -30,7 +30,7 @@ pip install -r requirements.txt
 
 ### To open the main olivia voice assistant python file run the code given below
 ```
-.\olivia.py
+python .\olivia.py
 ```
 
 # Main Functions
