@@ -19,7 +19,7 @@ def speech(txt):
 
 def weath():
     while True:
-        API_KEY = config('SECRET_API')
+        API_KEY = ('bd9032b1b36cc1642b3c5528c1949c96')
         location = input("Enter The Name Of The City/country : ")
         weather = "https://api.openweathermap.org/data/2.5/weather?q="+ location +"&appid="+API_KEY
         api_link = requests.get(weather)
@@ -56,5 +56,6 @@ def weath():
                 print("The Olivia Live Weather Detector Is Now Stoped !!!")
                 speech("the olivia live weather detector is now stoped")
                 break
+
 
 
