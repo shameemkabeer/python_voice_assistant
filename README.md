@@ -27,11 +27,15 @@ cd python_voice_assistant
 ```
 pip install -r requirements.txt
 ```
+```
+pip install PyAudio-0.2.11-cp310-cp310-win_amd64.whl
+```
 
 ### To open the main olivia voice assistant python file run the code given below
 ```
 python .\olivia.py
 ```
+### If recognition is not working properly vist the website [Pyaudio](https://www.lfd.uci.edu/~gohlke/pythonlibs/) and download pyaudio which compitable with your python version
 
 # Main Functions
 
