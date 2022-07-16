@@ -230,8 +230,6 @@ while True:
         else:
             try:
                 client = wolframalpha.Client('HRJJ27-YA53KJQK7W')
-                confuse = ["Invalid Entry !!!","doesn't understand your query","Check the connection"]
-                value = random.choice(confuse)
                 query = command
                 res = client.query(query)
                 output = next(res.results).text
