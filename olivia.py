@@ -13,6 +13,7 @@ import subprocess as sp
 import requests
 import time
 from function_online import weath
+import wolframalpha
 engine =pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('voice',voices[1].id)
@@ -161,7 +162,7 @@ while True:
             print("current time:",time)
             talk(time)
         #wikipedia
-        elif "who is" in command or "tell me about" in command:
+        elif "who is" in command or "search wikipedia" in command:
             person = command.replace('who is',command)
             person = command.replace('tell me about',command)
             info = wikipedia.summary(person,)
@@ -227,23 +228,33 @@ while True:
                 talk("i have switched my voice back to olivia")
                                                             ######Else#######
         else:
-            print("Do You Want To Search This In Google")
-            talk("do you want to search this in google")
-            Qust = input("Do You Want To Continuo..???")
-            if Qust == ("yes") or Qust == ('y'):
-                print ("Here your answer..")
-                talk("here your answer")
-                kit.search(command)
-                time.sleep(10)
-            elif Qust == ("no") or Qust == ('n'):
-                print ("try again")
-                talk("try again")
+            try:
+                client = wolframalpha.Client('HRJJ27-YA53KJQK7W')
+                confuse = ["Invalid Entry !!!","doesn't understand your query","Check the connection"]
+                value = random.choice(confuse)
+                query = command
+                res = client.query(query)
+                output = next(res.results).text
+                print(output)
+                talk(output)
+            except Exception:
+                print("Do You Want To Search This In Google")
+                talk("do you want to search this in google")
+                Qust = input("Do You Want To Continuo..???")
+                if Qust == ("yes") or Qust == ('y'):
+                    print ("Here your answer..")
+                    talk("here your answer")
+                    kit.search(command)
+                    time.sleep(10)
+                elif Qust == ("no") or Qust == ('n'):
+                    print ("try again")
+                    talk("try again")
     except:
         pass
 
 
-                                                                        #AUTHOR - SHXIM
+                                                                        #AUTHOR - SHAMEEMKABEER
                                                                         #DATE OF CREATION :7/4/2022
-                                                                        #ESTIMATED TIME :33 DAYS
+                                                                        
                                                                                         
 

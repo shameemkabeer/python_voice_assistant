@@ -1,3 +1,4 @@
+from cgitb import text
 from time import strftime
 import requests
 from datetime import datetime
@@ -6,13 +7,12 @@ import pyttsx3
 from decouple import config
 
 
-
 engine =pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('voice',voices[1].id)
 engine.setProperty("rate", 175)
 
-def speech(txt):
+def speak(txt):
     
     engine.say(txt)
     engine.runAndWait()
@@ -27,7 +27,7 @@ def weath():
 
         if api_data['cod'] == '404':
             print("Invalid City: '{}', please check the city name".format(location))
-            speech("Invalid City: '{}', please check the city name".format(location))
+            speak("Invalid City: '{}', please check the city name".format(location))
         else:
             temp_city = ((api_data['main']['temp'])-273.15)
             weathe_desc = api_data['weather'][0]['description']
@@ -42,20 +42,17 @@ def weath():
 	            [f"Current Wind Speed In - {location.upper()}", f"{wind_speed}'kmph'"]
             ]
             print(tabulate(mydata,headers=tabel_heading, tablefmt="grid"))
-            speech(f"current temperature in {location} : {temp_city:.2f}")    
-            speech(f"current weather discription in {location} {weathe_desc}")       
-            speech(f"current humidity in {location} {hmdt} percentage")        
-            speech(f"current wind speed in {location} {wind_speed} kilo meter per hour")
+            speak(f"current temperature in {location} : {temp_city:.2f}")    
+            speak(f"current weather discription in {location} {weathe_desc}")       
+            speak(f"current humidity in {location} {hmdt} percentage")        
+            speak(f"current wind speed in {location} {wind_speed} kilo meter per hour")
 
 
             quest = input("Do You Want To Continue....??? : ")
             if quest == 'y' or quest == 'yes':
                 print("Thank You For Using Again The Ovila Live Weather Detector !!!")
-                speech("thank you for using again the olivia live weather detector")
+                speak("thank you for using again the olivia live weather detector")
             else:
                 print("The Olivia Live Weather Detector Is Now Stoped !!!")
-                speech("the olivia live weather detector is now stoped")
+                speak("the olivia live weather detector is now stoped")
                 break
-
-
-
