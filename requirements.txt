@@ -20,7 +20,6 @@ MouseInfo==0.1.3
 numpy==1.23.0
 Pillow==9.2.0
 pipe-subprocess==0.3.7
-PyAudio @ file:///D:/Downloads/PyAudio-0.2.11-cp310-cp310-win_amd64.whl
 PyAutoGUI==0.9.53
 PyGetWindow==0.0.9
 pyjokes==0.6.0
