@@ -51,6 +51,9 @@ python .\olivia.py
 * Automatic Google Search Of Any Things You Should Say
 * Time/Date
 * Fun with you (Telling comedy's) 
+* Solving mathematics equations (step by step)
+* Telling everything about science 
+* Olivia answers every general knowledge questions 
   
 # Commands
 ### <i><u>Olivia Common Commands</u></i>
