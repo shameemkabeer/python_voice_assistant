@@ -62,13 +62,19 @@ while True:
         command = take_command()
         #olivia_commands
         if "what is your name" in command:
-            print(" 'OLIVIA' ")
+            print("OLIVIA")
             talk("olivia")
         elif "how are you" in command:
             print("Iam Fine")
             talk("iam fine")
             print("And What About You")
             talk("and what about you")
+        elif "iam fine" in command or "iam fine thankyou" in command:
+            print("okey")
+            talk("okey")
+        elif "yeah" in command or "yup" in command:
+            print("good job")
+            talk("good job")
         elif "who are you" in command:
             print("Iam Olivia")
             talk("iam olivia")
@@ -245,7 +251,7 @@ while True:
                     kit.search(command)
                     time.sleep(10)
                 elif Qust == ("no") or Qust == ('n'):
-                    print ("try again")
+                    print ("Try again")
                     talk("try again")
     except:
         pass
