@@ -27,13 +27,15 @@ def wishme():
     else:
         talk("good evening")
 
-    talk("iam olivia how can i help you")
+    rndm1 = ["Please let me know how I can help you. I'm Olivia","I'm Olivia. Let me know if there is anything I can do for you","Hi, I'm Olivia, and I would like to assist you"]
+    value1 = random.choice(rndm1)
+    talk(value1)
 
 def randm():
-    confuse = ["I din't get that could you try again?","say some thing"]
-    value = random.choice(confuse)
-    print(value)
-    talk(value)
+     confuse = ["\nI din't get that could you try again...\n","\nSay some thing...\n","\nCould you please try again...\n","\nCould you try that again for me...\n","\nAre you able to try again ? i din't get that...\n","\nDon't be silent...\n","\nLet's talk...\n","\nSpeak up...\n"]
+     value = random.choice(confuse)
+     print(value)
+     talk(value)
 
 def talk(txt):
      engine.setProperty("rate", 175)
@@ -54,7 +56,7 @@ def take_command():
          print(command)
          
     except:
-        talk(randm().replace('None',' ')) 
+         randm().replace('None',' ') 
     return command    
 
 while True:
@@ -70,8 +72,8 @@ while True:
             print("And What About You")
             talk("and what about you")
         elif "iam fine" in command or "iam fine thankyou" in command:
-            print("okey")
-            talk("okey")
+            print("That's cool")
+            talk("That's cool")
         elif "yeah" in command or "yup" in command:
             print("good job")
             talk("good job")
@@ -260,5 +262,3 @@ while True:
                                                                         #AUTHOR - SHAMEEMKABEER
                                                                         #DATE OF CREATION :7/4/2022
                                                                         
-                                                                                        
-
