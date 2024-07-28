@@ -28,7 +28,7 @@ cd python_voice_assistant
 pip install -r requirements.txt
 ```
 ```
-pip install PyAudio-0.2.11-cp310-cp310-win_amd64.whl
+pip install PyAudio
 ```
 
 ### To open the main olivia voice assistant python file run the code given below
