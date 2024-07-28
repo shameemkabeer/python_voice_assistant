@@ -1,10 +1,10 @@
-from cgitb import text
+#from cgitb import text
 from time import strftime
 import requests
 from datetime import datetime
 from tabulate import tabulate
 import pyttsx3
-from decouple import config
+#from decouple import config
 
 
 engine =pyttsx3.init()
