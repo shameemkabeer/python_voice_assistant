@@ -35,7 +35,7 @@ pip install PyAudio-0.2.11-cp310-cp310-win_amd64.whl
 ```
 python .\olivia.py
 ```
-### If recognition is not working properly vist the website [Pyaudio](https://www.lfd.uci.edu/~gohlke/pythonlibs/) and download pyaudio which compitable with your python version
+### If recognition is not working properly vist the website [Pyaudio](http://people.csail.mit.edu/hubert/pyaudio/) and download pyaudio which compitable with your python version
 
 # Main Functions
 
