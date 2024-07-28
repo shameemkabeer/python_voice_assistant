@@ -25,6 +25,12 @@ git clone https://github.com/shameemkabeer/python_voice_assistant.git
 cd python_voice_assistant
 ```
 ```
+ python -m venv venv
+```
+```
+venv/scripts/activate
+```
+```
 pip install -r requirements.txt
 ```
 ```
